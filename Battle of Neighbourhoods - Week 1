@@ -1,0 +1,48 @@
+Background
+I have recently accepted a scholarship from the university of New York. I have never been outside my country and I am terrified to go to a new strange place. What I have heard about New York is that it is the capital city in the United States of America. I hear New York is really big with a lot of lights. I will be like a small drop in the ocean and that is scary. I hear it is a global hub of commerce. It is multicultural. I will be relocating my 5 year old and as a mom that even scares me more. I will need to find a suitable location to stay. The place will need to be close to the university. There should be a good school in the area for my daughter. I will need to know the restaurants, schools, police and all other emergency evacuation services in my area. I will need to find a house that is resoanable priced. The house must meet the below requirement:
+
+      1. It must be must be a be a 2 bedroomed house.
+      2. The area must have a low crime rate.
+      3. It must be close to grade school. 
+      4. Desired location must be near University of New York
+      5. The rentals must not not exceed $5,000 per month
+
+
+Data Sources
+Description of the Data:¶
+To address the challenge I am faced with the following :
+
+1. List of neighbourhoods in Manhattan and their latitutes and longitudes
+2. List of 2 bedroom apartments for rent in Manhattan area with their addresses and price
+3. Schools close to the available apartments for rent.
+
+Use of the Data:
+
+The data will be used as follows:
+
+1. Foursquare and geopy data will be used to map top 10 venues in the Manhattan neighbourhood and clustered in groups.
+2. Using Foursquare and geopy data I will map location of  university seperately and on top of the above clustered map in order to identify the schools, clinics, resturants close to it.
+3. Creation of a map that will depict  the average rental price per square ft, around a radious of 1.0 mile (1.6 km) around each university - or a similar metrics. I will be able to quickly point to the popups to know the relative price per university area.
+4. The addresses from the rental locations to be converted to Geodata using Geopy-distance and Nominatim.
+5. I will search for data in available data sources.
+6. Addresses from rental locations will be converted to geodata( lat, long) using Geopy-distance and Nominatim.
+
+
+The procesing of these DATA will allow to answer the key questions to make a decision:
+
+1. what is the cost of rent (per square ft) around a mile radius from each subway metro station?
+2. what is the area of Manhattan with best rental pricing that meets criteria established?
+3. What is the distance from New York University and the tentative future home?
+4. What are the venues of the two best places to live? How the prices compare?
+5. How venues distribute among Manhattan neighborhoods and around New York Universoty?
+6. Are there tradeoffs between size and price and location?
+7. Any other interesting statistical data findings of the real estate and overall data.
+
+# Shenton Way, District 01, Singapore
+address = 'Mccallum Street, Singapore'
+
+geolocator = Nominatim()
+location = geolocator.geocode(address)
+latitude = location.latitude
+longitude = location.longitude
+print('The geograpical coordinate of Singapore home are {}, {}.'.format(latitude, longitude))
